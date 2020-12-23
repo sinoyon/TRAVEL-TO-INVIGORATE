@@ -1,0 +1,394 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+header{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),
+url("https://s1.1zoom.me/big0/104/Mountains_Men_507929.jpg") center no-repeat;
+        background-size: cover;
+	position: relative;
+  overflow: hidden;
+}
+.js span{
+  opacity: 0;
+  transition: all 5s ease;
+transform: translateY(100px);
+
+}
+.js span.fade{
+  opacity: 1;
+  transform: translateY(0px);
+  color: white;
+}
+
+.fade {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: fade 1s ease-in-out infinite alternate;
+  -moz-animation: fade 1s ease-in-out infinite alternate;
+  animation: fade 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes fade {
+	from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 30px #e60073, 0 0 30px #e60073, 0 0 30px #e60073, 0 0 40px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 30px #ff4da6, 0 0 60px #ff4da6, 0 0 50px #ff4da6;
+  }
+}
+.aaa {
+  -webkit-animation: aaa 0.5s ease-in-out infinite alternate;
+  -moz-animation: aaa 0.5s ease-in-out infinite alternate;
+  animation: aaa 0.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes aaa {
+	from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 10px #e60073, 0 0 3px #e60073, 0 0 10px #e60073, 0 0 3px #e60073, 0 0 4px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 30px #ff4da6, 0 0 6px #ff4da6, 0 0 5px #ff4da6;
+  }
+}
+
+.container{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #eeeeee;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+
+.brand{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.brand span{
+	color: crimson;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: crimson;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,.95);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.menu{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 5rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.brand{
+		font-size: 5rem;
+	}
+
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+
+}
+#intro {
+  display: table;
+  width: 100%;
+  height: 100vh;
+	padding-top: 150px;
+
+}
+#intro{
+	text-align: center;
+	margin-top: 130px;
+}
+#intro h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#intro p {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  color: #fff;
+	font-size: 18px;
+}
+
+.button {
+  border-radius: 20px;
+  background: linear-gradient(90deg,#755bea,#ff72c0);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 28px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.nvv{
+background-image: url("https://img.xda-cdn.com/HrnZ2Vsef7PQnxlFL08fmN0Er28=/http%3A%2F%2Fimages.tapatalk-cdn.com%2F15%2F12%2F26%2Fd684412011982fcd055f251d6b91c08e.jpg");
+}
+.hd h1{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	border-bottom: 3px solid #00121b;
+}
+
+
+
+.n{
+	background-color: #00121b;
+	width: 230px;
+	padding: 30px;
+	margin: 20px;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+}
+
+.n .button{
+	height: 55px;
+	width: 120px;
+}
+.new{
+	margin: auto;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+	      display: flex;
+	      list-style: none;
+	      padding-bottom: 25px;
+        align-items: right;
+        justify-content: center;
+
+}
+
+
+.n {
+    width: 220px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.n:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 15px;
+}
+
+.n:active {
+    color: #000;
+}
+
+.n:active:after {
+    background: transparent;
+}
+
+.n:hover:before {
+    opacity: 1;
+}
+
+.n:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

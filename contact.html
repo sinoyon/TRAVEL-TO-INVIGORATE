@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <header>
+            <div class="menu" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="overlay"></div>
+            <div class="container">
+                <nav>
+                   <h1 class="brand"><a href="index.html">Travel<span>-to-</span>invigorate</a></h1>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="outdoor.html">Outdoor Activity</a></li>
+                      <li><a href="indoor.html">Indoor Activity</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+<div class="contact-section">
+
+  <h1>Contact Us</h1>
+  <div class="bor"></div>
+
+  <div class="w">
+
+  <form class="contact-form"name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <input type="text" class="contact-form-text" placeholder="Your name" required>
+    <input type="email"class="contact-form-text" placeholder="Your email" required>
+    <input type="text" class="contact-form-text" placeholder="Your phone" required>
+    <textarea class="contact-form-text" placeholder="Your message"></textarea>
+    <input type="submit" class="contact-form-btn" value="Submit">
+  </form>
+<div class="pa">
+<h2><span>Address: </span>Jalan Gombak, 53100, Selangor</h2>
+<h2><span>Phone: </span>+60-0101010101</h2>
+<h2><span>Email: </span>Jinvigorate@info.com</h2><br><br>
+<div id="map"></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.3994748623704!2d101.73248081444665!3d3.250482053428572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38c2f70795af%3A0xf808897bf1163a3!2sInternational%20Islamic%20University%20Malaysia!5e0!3m2!1sen!2smy!4v1596922648330!5m2!1sen!2smy" width="400" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  }
+}
+</script>
+<script src="js/google-map.js" charset="utf-8"></script>
+  </body>
+</html>

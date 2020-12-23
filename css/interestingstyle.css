@@ -1,0 +1,85 @@
+body{
+  background: #4B4B4B;
+  color: #EAEAEA;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+
+@font-face{
+  font-family: FontAwesome;
+  src:url(http://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.eo?#iefix) format('eot'),url(http://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.woff) format('woff'),url(http://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.ttf) format('truetype'),url(http://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.svg#FontAwesome) format('svg');
+}
+
+h1,h2{
+  font-family: "Impact";
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+h1{
+  font-size: 5.0em;
+  color: #D5D5D5;
+}
+
+h2{
+  font-size: 2.2em;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+p{
+  text-align: justify;
+}
+a{
+  color: white;
+}
+
+#logo{
+  width: 600px;
+  overflow: hidden;
+  margin: 0px auto;
+  padding: 80px 30px;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container video{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform:translate(-50%, -50%);
+
+  z-index: -1;
+}
+
+hr{
+  border: 0px;
+  height: 5px;
+  background: orange;
+}
+
+#textbackground{
+  background: rgba(166, 42, 25, 0.7);
+  padding: 30px 30px;
+  color: #D5D5D5;
+}
+#blk{
+  color: black;
+}
+#gry{
+  color: grey;
+}
